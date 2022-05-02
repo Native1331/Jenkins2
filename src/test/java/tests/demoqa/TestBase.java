@@ -2,6 +2,7 @@ package tests.demoqa;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
+
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +27,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
             Configuration.browserCapabilities = capabilities;
         }
 
-        @AfterEach
+       @AfterEach
         void addAttachments() {
             Attach.screenshotAs("Last screenshot");
             Attach.pageSource();
