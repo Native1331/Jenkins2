@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -15,8 +16,7 @@ public class RegistrationFormTests extends tests.demoqa.TestBase {
         @Test
         @DisplayName("Successful  test")
         void shouldFindSelenide() {
-            //открыть страницу github.com
-            open("https://github.com");
+            open(baseUrl);
             //ввести в поле поиска selenide и нажать Enter
             $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
             sleep(5000);
